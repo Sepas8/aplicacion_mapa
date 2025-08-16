@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Nodo {
     String nombre;
-    int x, y; // Coordenadas para dibujar en el mapa
+    int x, y;
     List<Nodo> vecinos;
 
     public Nodo(String nombre, int x, int y) {

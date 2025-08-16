@@ -4,7 +4,7 @@ public class AppCiudad {
     public static void main(String[] args) {
         Ciudad ciudad = new Ciudad();
 
-        // Crear nodos (lugares en la ciudad)
+        // Crear nodos
 
         Nodo casa = new Nodo("Casa", 100, 100);
         Nodo parque = new Nodo("Parque", 300, 100);
@@ -12,13 +12,13 @@ public class AppCiudad {
         Nodo escuela = new Nodo("Escuela", 400, 400);
         Nodo hospital = new Nodo("Hospital", 500, 200);
 
-        // Conectar nodos (carreteras)
+        // Conectar nodos
 
         casa.conectar(parque);
         parque.conectar(tienda);
         casa.conectar(tienda);
         tienda.conectar(escuela);
-        parque.conectar(hospital); // Nueva conexión
+        parque.conectar(hospital);
         escuela.conectar(hospital);
 
         // Agregar a la ciudad
@@ -29,7 +29,7 @@ public class AppCiudad {
         ciudad.agregarNodo(escuela);
         ciudad.agregarNodo(hospital);
 
-        // Mostrar ventana con el mapa
+        // Mostrar el mapa
         JFrame frame = new JFrame("Mapa de la Ciudad (Grafo)");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.add(new MapaPanel(ciudad));

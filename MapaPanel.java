@@ -13,7 +13,6 @@ public class MapaPanel extends JPanel {
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // Dibujar conexiones (carreteras)
         g.setColor(Color.GRAY);
         for (Nodo n : ciudad.nodos) {
             for (Nodo v : n.vecinos) {
@@ -21,7 +20,6 @@ public class MapaPanel extends JPanel {
             }
         }
 
-        // Dibujar nodos (lugares)
         for (Nodo n : ciudad.nodos) {
             g.setColor(Color.RED);
             g.fillOval(n.x - 10, n.y - 10, 20, 20);
