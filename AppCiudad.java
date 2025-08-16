@@ -35,5 +35,11 @@ public class AppCiudad {
         frame.add(new MapaPanel(ciudad));
         frame.pack();
         frame.setVisible(true);
+
+        GrafoExporter exporter = new GrafoExporter(new XMLExportVisitor());
+        String xml = exporter.export(ciudad);
+
+        System.out.println("=== XML Exportado ===");
+        System.out.println(xml);
     }
 }
